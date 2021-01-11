@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- important meta tags  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- title  -->
+    <title>Search Notes</title>
+     
+    <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+     
+     <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/plugins/font-awesome/css/font-awesome.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/plugins/bootstrap/bootstrap.min.css">
+    
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/2.2.1-search-notes/search-notes.css">
+
+    <!-- responsive css  --> 
+    <link rel="stylesheet" href="../css/2.2.1-search-notes/responsive.css">
+</head>
+<body>
+
+    <!-- header  -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+                        <!-- logo  -->
+                        <a href="../index.html" class="navbar-brand smooth-scroll">
+                            <img src="../image/home/logo blue.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- main menu  -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse d">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a class="smooth-scroll" href="2.2.1-Search-notes.html">Search Notes</a></li>
+                                <li><a class="smooth-scroll" href="dashboard.html">Sell Your Notes</a></li>
+                                <li><a class="smooth-scroll" href="Faq.html">FAQ</a></li>
+                                <li><a class="smooth-scroll" href="ContactUs.html">Contact Us</a></li>
+                                <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"  role="button">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a class="smooth-scroll" href="2.2.1-Search-notes.html">Search Notes</a></li>
+                                <li><a class="smooth-scroll" href="dashboard.html">Sell Your Notes</a></li>
+                                <li><a class="smooth-scroll" href="Faq.html">FAQ</a></li>
+                                <li><a class="smooth-scroll" href="ContactUs.html">Contact Us</a></li>
+                                <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html" title="Start Now" role="button">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header ends  -->
+
+    <!-- home -->
+    <section id="home">
+        <div class="home-bg-img"></div>
+
+         <!-- home content -->
+            <div id="home-content">
+                <div>
+                   
+                    <div id="home-heading" class="text-center">
+                        <h1 id="home-heading-1" >Search Notes</h1>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+    <!-- home end -->
+
+     <!-- search area -->
+     <section id="about">
+         <div class="container">
+             <div class="row">
+                <div class="col-md-12">    
+                    <div id="serach-title">
+                         Search and Filter notes
+                    </div>
+                    
+                    <div class="content-box-lg">
+                        <class class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="box">    
+                                    <input type="text" placeholder="Search notes here">   
+                                </div>
+                            </div>
+                        </class>
+                        
+                        <div id="type-main">
+                            <div class="row" >
+                                <div class="col-md-2  col-sm-4 col-xs-12">
+                                    <select name="select-type" id="type-1">
+                                        <option value="type">Select type</option>
+                                        <option value="type">Handwritten notes</option>
+                                        <option value="type">University notes</option>
+                                        <option value="type">Notebook</option>
+                                        <option value="type">Novel</option>
+                                    </select>  
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <select name="select-category" id="type-1">
+                                        <option value="type">Select-category</option>
+                                        <option value="type">IT</option>
+                                        <option value="type">CA</option>
+                                        <option value="type">CS</option>
+                                        <option value="type">MBA</option>
+                                    </select>  
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <select name="select-type" id="type-1">
+                                        <option value="type">Select university</option>
+                                        <option value="type">GTU</option>
+                                        <option value="type">SP</option>
+                                    </select>  
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <select name="select-course" id="type-1">
+                                        <option value="type">Select course</option>
+                                        <option value="type">ITI</option>
+                                        <option value="type">Diploma</option>
+                                    </select>  
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <select name="select-country" id="type-1">
+                                        <option value="type">Select country</option>
+                                        <option value="type">India</option>
+                                        <option value="type">Usa</option>
+                                    </select>  
+                                </div>
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <select name="select-rating" id="type-1">
+                                        <option value="type">Select rating</option>
+                                        <option value="type">1+</option>
+                                        <option value="type">2+</option>
+                                        <option value="type">3+</option>
+                                        <option value="type">4+</option>
+                                        <option value="type">5</option>
+                                        
+                                    </select>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section> 
+    <!-- search area -->
+    
+
+    <!-- book list -->
+    <section id="bookes">
+
+        <div class="content-box-md">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <div id="total-book-title">
+                            Total 18 notes
+                       </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                        <!-- book list Table 01 -->
+                        <div class="book-list">
+                            <div class="type">
+                                <img src="../image/2.2.1-Search-notes/2.jpg" alt="" >
+                            </div>
+                            <div class="layer">
+                                <div class="row">
+                                    <div class="book-details" class="col-md-12">
+                                        <div class="book-heading"><a href="notes-details.html">Computer Operating System -Final <br> Exam with Paper Solution </a></div>
+                                        
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/university.png" alt="university"> </i>
+                                            <h6 class="fa-detail" >University of california</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/pages.png" alt="pages"> </i>
+                                            <h6 class="fa-detail" >204 pages</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/date.png" alt="date"></i>
+                                            <h6 class="fa-detail" >Thus, Nov 26 2020</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/flag.png" alt=""></i>
+                                            <h6 class="fa-detail" >5 Users marks this as a inappropriate</h2>
+                                        </div>
+                                        <br>
+                                
+                                        <div class="fa1" >
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <h6 class="fa-detail" >  100 reviews</h2>
+                                        </div>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                        <!-- book list Table 02 -->
+                        <div class="book-list">
+                            <div class="type">
+                                <img src="../image/2.2.1-Search-notes/3.jpg" alt="book" >
+                            </div>
+                            <div class="layer">
+                                <div class="row">
+                                    <div class="book-details" class="col-md-12">
+                                        <div class="book-heading"><a href="notes-details.html"> Computer Operating System -Final <br> Exam with Paper Solution</a></div>
+                                        
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/university.png" alt="university"></i>
+                                            <h6 class="fa-detail" >University of california</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/pages.png" alt="page"></i>
+                                            <h6 class="fa-detail" >204 pages</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/date.png" alt="notes"></i>
+                                            <h6 class="fa-detail" >Thus, Nov 26 2020</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/flag.png" alt="flag"></i>
+                                            <h6 class="fa-detail" >5 Users marks this as a inappropriate</h2>
+                                        </div>
+                                        <br>
+                                
+                                        <div class="fa1" >
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <h6 class="fa-detail" >  100 reviews</h2>
+                                        </div>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                        <!-- book list Table 03 -->
+                        <div class="book-list">
+                            <div class="type">
+                                <img src="../image/2.2.1-Search-notes/4.jpg" alt="book">
+                            </div>
+                            <div class="layer">
+                                <div class="row">
+                                    <div class="book-details" class="col-md-12">
+                                        <div class="book-heading"><a href="notes-details.html"> Computer Operating System -Final <br> Exam with Paper Solution</a> </div>
+                                        
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/university.png" alt="university"></i>
+                                            <h6 class="fa-detail" >University of california</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/pages.png" alt="page"></i>
+                                            <h6 class="fa-detail" >204 pages</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/date.png" alt="date"></i>
+                                            <h6 class="fa-detail" >Thus, Nov 26 2020</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/flag.png" alt=""></i>
+                                            <h6 class="fa-detail" >5 Users marks this as a inappropriate</h2>
+                                        </div>
+                                        <br>
+                                
+                                        <div class="fa1" >
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <h6 class="fa-detail" >  100 reviews</h2>
+                                        </div>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                        <!-- book list Table 04 -->
+                        <div class="book-list">
+                            <div class="type">
+                                <img src="../image/2.2.1-Search-notes/2.jpg" alt="" srcset="">
+                            </div>
+                            <div class="layer">
+                                <div class="row">
+                                    <div class="book-details" class="col-md-12">
+                                        <div class="book-heading"><a href="notes-details.html"> Computer Operating System -Final <br> Exam with Paper Solution </a> </div>
+                                        
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/university.png" alt="university"></i>
+                                            <h6 class="fa-detail" >University of california</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/pages.png" alt="page"></i>
+                                            <h6 class="fa-detail" >204 pages</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/date.png" alt="date"></i>
+                                            <h6 class="fa-detail" >Thus, Nov 26 2020</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/flag.png" alt=""></i>
+                                            <h6 class="fa-detail" >5 Users marks this as a inappropriate</h2>
+                                        </div>
+                                        <br>
+                                
+                                        <div class="fa1" >
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <h6 class="fa-detail" >  100 reviews</h2>
+                                        </div>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                        <!-- book list Table 05 -->
+                        <div class="book-list">
+                            <div class="type">
+                                <img src="../image/2.2.1-Search-notes/3.jpg" alt="book" >
+                            </div>
+                            <div class="layer">
+                                <div class="row">
+                                    <div class="book-details" class="col-md-12">
+                                        <div class="book-heading"><a href="notes-details.html"> Computer Operating System -Final <br> Exam with Paper Solution </a> </div>
+                                        
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/university.png" alt="university"></i>
+                                            <h6 class="fa-detail" >University of california</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/pages.png" alt="page"></i>
+                                            <h6 class="fa-detail" >204 pages</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/date.png" alt="date"></i>
+                                            <h6 class="fa-detail" >Thus, Nov 26 2020</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/flag.png" alt=""></i>
+                                            <h6 class="fa-detail" >5 Users marks this as a inappropriate</h2>
+                                        </div>
+                                        <br>
+                                
+                                        <div class="fa1" >
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <h6 class="fa-detail" >  100 reviews</h2>
+                                        </div>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+
+                        <!-- book list Table 06 -->
+                        <div class="book-list">
+                            <div class="type">
+                                <img src="../image/2.2.1-Search-notes/4.jpg" alt="book">
+                            </div>
+                            <div class="layer">
+                                <div class="row">
+                                    <div class="book-details" class="col-md-12">
+                                        <div class="book-heading"><a href="notes-details.html"> Computer Operating System -Final <br> Exam with Paper Solution </a> </div>
+                                        
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/university.png" alt="university"></i>
+                                            <h6 class="fa-detail" >University of california</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/pages.png" alt="page"></i>
+                                            <h6 class="fa-detail" >204 pages</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/date.png" alt="date"></i>
+                                            <h6 class="fa-detail" >Thus, Nov 26 2020</h2>
+                                        </div>
+                                        <br>
+                                        <div class="fa1" >
+                                            <i><img src="../image/2.2.1-Search-notes/flag.png" alt=""></i>
+                                            <h6 class="fa-detail" >5 Users marks this as a inappropriate</h2>
+                                        </div>
+                                        <br>
+                                
+                                        <div class="fa1" >
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <h6 class="fa-detail" >  100 reviews</h2>
+                                        </div>
+
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- pagination  -->
+                <div class="pagination">
+                    <a href="#">&lt;</a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                   
+                    <a href="#">&gt;</a>
+                  </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- book list -->
+   
+
+     <!-- footer  -->
+     <footer class="text-left">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                    
+                        Copyright &copy; Tatvasoft All Rights Reserved. 
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-google-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    
+
+
+   
+
+    <!-- jquery  -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+   <script>
+
+        /* =========================================
+                    Mobile Menu
+        ============================================ */
+        $(function () {
+
+        // Show mobile nav
+        $("#mobile-nav-open-btn").click(function () {
+            $("#mobile-nav").css("height", "100%");
+        });
+
+        // Hide mobile nav
+        $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+            $("#mobile-nav").css("height", "0%");
+        });
+
+        });
+   </script>
+    
+</body>
+</html>

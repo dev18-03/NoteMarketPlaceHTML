@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tags  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+
+    <!-- title  -->
+    <title>Add Category</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/plugins/bootstrap/bootstrap.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/admin-add-category/admin-add-category.css">
+    
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/admin-add-category/responsive.css">
+
+
+
+
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+                          <!-- Mobile Menu Open Button -->
+                       <span id="mobile-nav-open-btn">&#9776;</span>
+                       <!-- logo -->
+                        <a href="admin-dashboard.html" class="navbar-brand smooth-scroll">
+                            <img src="../image/home/logo blue.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- main menu  -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse d">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a class="smooth-scroll" href="admin-dashboard.html">Dashboard</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Notes
+                                    </a>
+                              
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li> <a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a></li>
+                                      <li><a class="dropdown-item" href="admin-published-notes.html">Published Notes</a></li>
+                                      <li><a class="dropdown-item" href="admin-dashboard.html">Downloaded Notes</a></li>
+                                      <li> <a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes Notes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="smooth-scroll" href="admin-member.html">Members</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Reports
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="admin-span-report.html">Span Reports</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Settings
+                                    </a>
+                              
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li> <a class="dropdown-item" href="admin-manage-system-confi.html">Manage System Configuration</a></li>
+                                      <li><a class="dropdown-item" href="admin-manage-administration.html">Manage Administrator</a></li>
+                                      <li><a class="dropdown-item" href="admin-manage-category.html">Manage Category</a></li>
+                                      <li> <a class="dropdown-item" href="admin-manage-type.html">Manage Type</a></li>
+                                      <li> <a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a></li>
+                                    </ul>
+                                </li>       
+                                
+                                <li>
+                                  <div class="dropdown">
+                                    <button class=" dropdown-toggle .btn-user" type="button" data-toggle="dropdown"><img class="more" src="../image/Dashboard/user-img.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="admin-my-profile.html">Update Profile</a></li>
+                                      <li><a class="dropdown-item" href="ChangePassword.html">Change Password</a></li>
+                                      <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                    </ul>
+                                  </div>    
+                                 </li>
+                                <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"
+                                        title="Start Now" role="button">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                      <!-- Mobile Menu -->
+                      <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+  
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                              <li><a class="smooth-scroll" href="admin-dashboard.html">Dashboard</a></li>
+                              <li class="nav-item dropdown">
+                                <div class="dropdown">
+                                <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Notes
+                                </button>
+                            
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li> <a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a></li>
+                                    <li><a class="dropdown-item" href="admin-published-notes.html">Published Notes</a></li>
+                                    <li><a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a></li>
+                                    <li> <a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes Notes</a></li>
+                                  </ul>
+                                </div>
+                              </li>
+                              <li><a class="smooth-scroll" href="admin-member.html">Members</a></li>
+                              <li class="nav-item dropdown">
+                                <div class="dropdown">
+                                  <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Reports
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="admin-span-report.html">Span Reports</a></li>
+                                  </ul>
+                                </div> 
+                              </li>
+                              <li class="nav-item dropdown">
+                                <div class="dropdown">
+                                  <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Settings
+                                 </button>
+                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li> <a class="dropdown-item" href="admin-manage-system-confi.html">Manage System Configuration</a></li>
+                                  <li><a class="dropdown-item" href="admin-manage-administration.html">Manage Administrator</a></li>
+                                  <li><a class="dropdown-item" href="admin-manage-category.html">Manage Category</a></li>
+                                  <li> <a class="dropdown-item" href="admin-manage-type.html">Manage Type</a></li>
+                                  <li> <a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a></li>
+                                </ul>
+                                </div>    
+                                
+                            
+                              </li>       
+                              
+                              <li>
+                                <div class="dropdown">
+                                  <button class=" dropdown-toggle .btn-user" type="button" data-toggle="dropdown"><img class="more" src="../image/Dashboard/user-img.png" alt="dots">
+                                  </button>
+                                  <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="admin-my-profile.html">Update Profile</a></li>
+                                    <li><a class="dropdown-item" href="ChangePassword.html">Change Password</a></li>
+                                    <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                  </ul>
+                                </div>    
+                               </li>
+                              <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"
+                                      title="Start Now" role="button">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header ends  -->
+ 
+
+    
+
+
+  <!-- basic profile list -->
+  <section id="bookes">
+
+    <div class="content-box-md">
+
+        <div class="container">
+
+            <!-- header Row -->
+            <div class="row">
+
+                <!-- Main heading -->
+                <div class="col-md-12">
+                    <div id="heading">
+                        Add Category
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <!-- Details  -->
+            <div class="row">
+
+                <!-- left side  -->
+                <div class="col-md-6 col-sm-12 col-xs-6">
+
+
+                    <form id="forget" class="input-group">
+                        <div id="margin">
+                            
+                            <!-- First Name Field -->
+                            <label for="CategoryName"> Category Name </label><span class="required"> *</span>
+                            <div class="input-box">
+                                <input type="text" name="CategoryName" placeholder="Enter Category name" id="CategoryName"
+                                    autocomplete="off" />
+                            </div>
+
+                            <!-- description Field -->
+                            <label for="description"> Description </label><span class="required"> *</span><br>
+                            
+                                <textarea name="description" id="" cols="80" rows="6" placeholder="Enter your description"></textarea>
+                            
+
+                           
+
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    
+
+
+
+
+
+
+                <!-- footer  -->
+                <footer class="text-left">
+                    <hr>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+
+                                    Copyright &copy; Tatvasoft All Rights Reserved.
+                                </p>
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </footer>
+
+                
+
+
+
+                <!-- jquery  -->
+                <script src="../js/jquery.min.js"></script>
+                <!-- Bootstrap JS -->
+                <script src="../js/bootstrap/bootstrap.min.js"></script>
+                <!-- Custom JS -->
+                <script>
+
+                    /* =========================================
+                                Mobile Menu
+                    ============================================ */
+                    $(function () {
+            
+                    // Show mobile nav
+                    $("#mobile-nav-open-btn").click(function () {
+                        $("#mobile-nav").css("height", "100%");
+                    });
+            
+                    // Hide mobile nav
+                    $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+                        $("#mobile-nav").css("height", "0%");
+                    });
+            
+                    });
+                    
+               </script>
+            
+
+</body>
+
+</html>

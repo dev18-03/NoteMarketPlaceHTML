@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- important meta tags  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+
+    <!-- title  -->
+    <title>Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="../css/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/plugins/bootstrap/bootstrap.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/admin-dashboard/admin-dashboard1.css">
+
+    <!-- responsive css -->
+    <link rel="stylesheet" href="../css/admin-dashboard/responsive.css">
+
+
+
+</head>
+
+<body>
+
+    <!-- header  -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+                       <!-- Mobile Menu Open Button -->
+                       <span id="mobile-nav-open-btn">&#9776;</span>
+                       <!-- logo -->
+                        <a href="admin-dashboard.html" class="navbar-brand smooth-scroll">
+                            <img src="../image/home/logo blue.png" alt="logo">
+                        </a>
+                    </div>
+                    <!-- main menu  -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse d">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a class="smooth-scroll" href="admin-dashboard.html">Dashboard</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Notes
+                                    </a>
+                              
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li> <a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a></li>
+                                      <li><a class="dropdown-item" href="admin-published-notes.html">Published Notes</a></li>
+                                      <li><a class="dropdown-item" href="admin-dashboard.html">Downloaded Notes</a></li>
+                                      <li> <a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes Notes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a class="smooth-scroll" href="admin-member.html">Members</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Reports
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li><a class="dropdown-item" href="admin-span-report.html">Span Reports</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Settings
+                                    </a>
+                              
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <li> <a class="dropdown-item" href="admin-manage-system-confi.html">Manage System Configuration</a></li>
+                                      <li><a class="dropdown-item" href="admin-manage-administration.html">Manage Administrator</a></li>
+                                      <li><a class="dropdown-item" href="admin-manage-category.html">Manage Category</a></li>
+                                      <li> <a class="dropdown-item" href="admin-manage-type.html">Manage Type</a></li>
+                                      <li> <a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a></li>
+                                    </ul>
+                                </li>       
+                                
+                                <li>
+                                  <div class="dropdown">
+                                    <button class=" dropdown-toggle .btn-user" type="button" data-toggle="dropdown"><img class="more" src="../image/Dashboard/user-img.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="admin-my-profile.html">Update Profile</a></li>
+                                      <li><a class="dropdown-item" href="ChangePassword.html">Change Password</a></li>
+                                      <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                    </ul>
+                                  </div>    
+                                 </li>
+                                <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"
+                                        title="Start Now" role="button">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                     <!-- Mobile Menu -->
+                     <div id="mobile-nav">
+                      <!-- Mobile Menu Close Button -->
+                      <span id="mobile-nav-close-btn">&times;</span>
+
+                      <div id="mobile-nav-content">
+                          <ul class="nav">
+                            <li><a class="smooth-scroll" href="admin-dashboard.html">Dashboard</a></li>
+                            <li class="nav-item dropdown">
+                              <div class="dropdown">
+                              <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Notes
+                              </button>
+                          
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li> <a class="dropdown-item" href="admin-notes-under-review.html">Notes Under Review</a></li>
+                                  <li><a class="dropdown-item" href="admin-published-notes.html">Published Notes</a></li>
+                                  <li><a class="dropdown-item" href="admin-downloaded-notes.html">Downloaded Notes</a></li>
+                                  <li> <a class="dropdown-item" href="admin-rejected-notes.html">Rejected Notes Notes</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li><a class="smooth-scroll" href="admin-member.html">Members</a></li>
+                            <li class="nav-item dropdown">
+                              <div class="dropdown">
+                                <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Reports
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <li><a class="dropdown-item" href="admin-span-report.html">Span Reports</a></li>
+                                </ul>
+                              </div> 
+                            </li>
+                            <li class="nav-item dropdown">
+                              <div class="dropdown">
+                                <button class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  Settings
+                               </button>
+                               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li> <a class="dropdown-item" href="admin-manage-system-confi.html">Manage System Configuration</a></li>
+                                <li><a class="dropdown-item" href="admin-manage-administration.html">Manage Administrator</a></li>
+                                <li><a class="dropdown-item" href="admin-manage-category.html">Manage Category</a></li>
+                                <li> <a class="dropdown-item" href="admin-manage-type.html">Manage Type</a></li>
+                                <li> <a class="dropdown-item" href="admin-manage-country.html">Manage Countries</a></li>
+                              </ul>
+                              </div>    
+                              
+                          
+                            </li>       
+                            
+                            <li>
+                              <div class="dropdown">
+                                <button class=" dropdown-toggle .btn-user" type="button" data-toggle="dropdown"><img class="more" src="../image/Dashboard/user-img.png" alt="dots">
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="admin-my-profile.html">Update Profile</a></li>
+                                  <li><a class="dropdown-item" href="ChangePassword.html">Change Password</a></li>
+                                  <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                </ul>
+                              </div>    
+                             </li>
+                            <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"
+                                    title="Start Now" role="button">Logout</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header ends  -->
+ 
+
+    
+
+
+    <!--dashboard -->
+    <section id="dashboard">
+
+        <div class="content-box-md">
+
+            <div class="container">
+
+                <!-- header Row -->
+                <div class="row">
+
+                    <!-- Main heading -->
+                    <div class="col-md-12">
+                        <div id="heading">
+                            Dashboard
+                        </div>
+                    
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div cla-4 notes-review">
+                    <div class="col-md-4 col-sm-4  col-xs-4 notes-review">
+                        <span><a href="admin-notes-under-review.html">20</a></span><br>
+                        <p>Number of Notes In Review for Publish</p>
+                    
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 new-downloaded">
+                       
+                        <span><a href="admin-downloaded-notes.html">103</a></span><br>
+                        <p>Number of New Notes Downloaded</p>
+                        <p><span>(Last 7 Days)</span></p>
+     
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4 new-register">
+                       
+                        <span><a href="admin-member.html">223</a></span><br>
+                        <p>Number of New Registration</p>
+                        
+                        
+                    </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!--progress notes -->
+    <section id="progress notes">
+
+        <div class="content-box-md">
+
+            <div class="container">
+
+                <!-- header Row -->
+                <div class="row">
+
+                    <!-- Main heading -->
+                    <div class="col-md-12">
+                        <div id="heading-1">
+                          Published Notes
+                        </div>
+                        <div class="elementcontainer">
+                        <div class="search-container">
+                                <img src="../image/Dashboard/search-icon.svg" alt="search-icon" class="search-icon">     
+                                <input type="text" placeholder="Search" class="search-box">  
+                        </div>
+                        
+                        <a class="btn btn-general search-1 smooth-scroll" href="#" title="Search" role="button">Search</a>
+                        <form class="month-dropdown">
+                            <select name="select-month" id="month">
+                                <option value="month">Select month</option>
+                                <option value="month">Jan</option>
+                                <option value="month">Feb</option>
+                                <option value="month">March</option>
+                                <option value="month">Apr</option>
+                                <option value="month">May</option>
+                                <option value="month">Jun</option>
+                                <option value="month">July</option>
+                                <option value="month">Aug</option>
+                                <option value="month">Sept</option>
+                                <option value="month">Oct</option>
+                                <option value="month">Nov</option>
+                                <option value="month">Dec</option>
+                            </select>
+                        </form>
+                    </div>
+                    </div>   
+                </div>
+                <div class="table-box">
+                    <div class=" table-responsive">
+                        <table class="table">
+                          <thead>
+                              <tr>
+                                <th scope="col">SR No.</th>
+                                <th scope="col">NOTE TITLE</th>
+                                <th scope="col">CATEGORY</th>
+                                <th scope="col">ATTACHMENT SIZE</th>
+                                <th scope="col">SELL TYPE</th>
+                                <th scope="col">PRICE</th>
+                                <th scope="col">PUBLISHER</th>
+                                <th scope="col">PUBLIHED DATE</th>
+                                <th scope="col">NUMBER OF <br> DOWNLOADS</th>
+                                
+                              </tr>
+                          </thead>
+                              <tbody>
+                                <tr>
+                                  <td>1</td>
+                                  <td><a href="notes-details.html">Data Science</a></td>
+                                  <td>Science</td>
+                                  <td>10KB</td>
+                                  <td>Free</td>  
+                                  <td>$0</td>  
+                                  <td>Pritesh Panchal</td>
+                                  <td>09-10-2020, 10:10</td>
+                                  <td> <a href="admin-downloaded-notes.html">10</a> <div class="dropdown">
+                                    <button class="button dropdown-toggle" type="button" data-toggle="dropdown"><img class="more" src="../image/mydownloads/dots.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Download note</a></li>
+                                        <li><a href="notes-details.html">View Details</a></li>
+                                        <li><a type="button"  data-toggle="modal" data-target="#myModal">Unpublish</a></li>
+                                    </ul>
+                                  </div>    
+                                  </td> 
+                                   
+                                </tr>
+                                <tr>
+                                  <td>2</td>
+                                  <td><a href="notes-details.html">Accounts</a></td>
+                                  <td>Commerce</td>
+                                  <td>23 MB</td>
+                                  <td>Paid</td>  
+                                  <td>$250</td>  
+                                  <td>Rahil Shah</td>
+                                  <td>10-10-2020, 10:10</td>
+                                  <td> <a href="admin-downloaded-notes.html">24</a>   <div class="dropdown">
+                                    <button class="button dropdown-toggle" type="button" data-toggle="dropdown"><img class="more" src="../image/mydownloads/dots.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Download note</a></li>
+                                        <li><a href="notes-details.html">View Details</a></li>
+                                        <li><a type="button"  data-toggle="modal" data-target="#myModal">Unpublish</a></li>
+                                    </ul>
+                                  </div>    
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td>3</td>
+                                  <td><a href="notes-details.html">Social Studies</a></td>
+                                  <td>Social</td>
+                                  <td>3 MB</td>
+                                  <td>Free</td>  
+                                  <td>0</td>  
+                                  <td>Anish Patel</td>
+                                  <td>11-10-2020, 10:10</td>
+                                  <td>  <a href="admin-downloaded-notes.html"> 7</a>  <div class="dropdown">
+                                    <button class="button dropdown-toggle" type="button" data-toggle="dropdown"><img class="more" src="../image/mydownloads/dots.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Download note</a></li>
+                                        <li><a href="notes-details.html">View Details</a></li>
+                                        <li><a type="button"  data-toggle="modal" data-target="#myModal">Unpublish</a></li>
+                                    </ul>
+                                  </div>    
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td>4</td>
+                                  <td><a href="notes-details.html">AI</a></td>
+                                  <td>IT</td>
+                                  <td>1 MB</td>
+                                  <td>Paid</td>  
+                                  <td>$250</td>  
+                                  <td>Vijay Vaishnav</td>
+                                  <td>12-10-2020, 10:10</td>
+                                  <td> <a href="admin-downloaded-notes.html">43</a> <div class="dropdown">
+                                    <button class="button dropdown-toggle" type="button" data-toggle="dropdown"><img class="more" src="../image/mydownloads/dots.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Download note</a></li>
+                                        <li><a href="notes-details.html">View Details</a></li>
+                                        <li><a type="button"  data-toggle="modal" data-target="#myModal">Unpublish</a></li>
+                                    </ul>
+                                  </div>    
+                                  </td> 
+                                </tr>
+                                <tr>
+                                  <td>5</td>
+                                  <td><a href="notes-details.html">Lorem Ipsum</a></td>
+                                  <td>Lorem </td>
+                                  <td>105 KB</td>
+                                  <td>Paid</td>  
+                                  <td>$90</td>  
+                                  <td>Mehul Patel</td>
+                                  <td>13-10-2020, 10:10</td>
+                                  <td> <a href="admin-downloaded-notes.html">27</a> <div class="dropdown">
+                                    <button class="button dropdown-toggle" type="button" data-toggle="dropdown"><img class="more" src="../image/mydownloads/dots.png" alt="dots">
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Download note</a></li>
+                                        <li><a href="notes-details.html">View Details</a></li>
+                                        <li><a type="button"  data-toggle="modal" data-target="#myModal">Unpublish</a></li>
+                                        
+                                    </ul>
+                                  </div>    
+                                  </td> 
+                                </tr>
+                                
+                            
+                               
+                              </tbody>
+                          </tbody>
+                        </table>
+                      </div>
+            
+                </div>
+
+                <!-- pagination  -->
+                <div class="pagination">
+                  <a href="#">&lt;</a>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                 
+                  <a href="#">&gt;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+  
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Unpublish</h4>
+        </div>
+        <div class="modal-body">
+         
+          <label for="remark">Note Title</label><br>
+          <label for="remark">Remark</label><span>*</span><br>
+          <textarea name="remark" id="" cols="70" rows="8"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Unpublished</button>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+    
+
+
+
+
+
+
+                <!-- footer  -->
+                <footer class="text-left">
+                    <hr>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>
+
+                                    Copyright &copy; Tatvasoft All Rights Reserved.
+                                </p>
+                            </div>
+                    
+                        </div>
+                    </div>
+
+                </footer>
+
+                
+
+
+
+                <!-- jquery  -->
+                <script src="../js/jquery.min.js"></script>
+                <!-- Bootstrap JS -->
+                <script src="../js/bootstrap/bootstrap.min.js"></script>
+                <!-- Custom JS -->
+                <script>
+
+                  /* =========================================
+                              Mobile Menu
+                  ============================================ */
+                  $(function () {
+          
+                  // Show mobile nav
+                  $("#mobile-nav-open-btn").click(function () {
+                      $("#mobile-nav").css("height", "100%");
+                  });
+          
+                  // Hide mobile nav
+                  $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+                      $("#mobile-nav").css("height", "0%");
+                  });
+          
+                  });
+                  
+             </script>
+            
+
+</body>
+
+</html>
