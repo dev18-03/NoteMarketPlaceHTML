@@ -1,0 +1,509 @@
+﻿@model IEnumerable<NoteMarketPlace.Models.SellerNote>
+    @{
+        ViewBag.Title = "SearchYourNotes";
+        Layout = null;
+    }
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <!-- important meta tags  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 ,user-scalable=no">
+
+
+        <!-- title  -->
+        <title>Search Your Notes</title>
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+        <!-- Fontawesome -->
+        <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+        <!-- Bootstrap CSS -->
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+        <!-- custom css -->
+        <link href="~/Style/SearchYourNotes/dashboard.css" rel="stylesheet" />
+
+        <!-- responsive css -->
+        <link href="~/Style/SearchYourNotes/responsive.css" rel="stylesheet" />
+
+
+
+    </head>
+
+    <body>
+
+        <!-- header  -->
+        <header>
+            <nav class="navbar navbar-fixed-top white-nav-top">
+                <div class="container-fluid">
+                    <div class="site-nav-wrapper">
+                        <div class="navbar-header">
+                            <!-- Mobile Menu Open Button -->
+                            <span id="mobile-nav-open-btn">&#9776;</span>
+                            <!-- logo -->
+                            <a href="../index.html" class="navbar-brand smooth-scroll">
+                                <img src="../image/home/logo blue.png" alt="logo">
+                            </a>
+                        </div>
+                        <!-- main menu  -->
+                        <div class="container">
+                            <div class="collapse navbar-collapse d">
+                                <ul class="nav navbar-nav pull-right">
+                                    <li><a class="smooth-scroll" href="2.2.1-Search-notes.html">Search Notes</a></li>
+                                    <li><a class="smooth-scroll" href="/home/SearchYourNotes">Sell Your Notes</a></li>
+                                    <li><a class="smooth-scroll" href="/home/BuyerReq">Buyer Requests</a></li>
+                                    <li><a class="smooth-scroll" href="/home/Faq">FAQ</a></li>
+                                    <li><a class="smooth-scroll" href="/home/ContactUs">Contact Us</a></li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle .btn-user" type="button" data-toggle="dropdown">
+                                                @*<img class="more" src="../image/Dashboard/user-img.png" alt="dots">*@
+                                                <img class="more" src="~/Image/BuyerReq/user-img.png" />
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="user-profile.html">My Profile</a></li>
+                                                <li><a class="dropdown-item" href="mydownloads.html">My Downloads</a></li>
+                                                <li><a class="dropdown-item" href="mysoldnotes.html">My Sold Notes</a></li>
+                                                <li><a class="dropdown-item" href="rejectednotes.html">My Rejected Notes</a></li>
+                                                <li><a class="dropdown-item" href="ChangePassword.html">Change Password</a></li>
+                                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"
+                                           title="Start Now" role="button">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div id="mobile-nav">
+                            <!-- Mobile Menu Close Button -->
+                            <span id="mobile-nav-close-btn">&times;</span>
+
+                            <div id="mobile-nav-content">
+                                <ul class="nav">
+                                    <li><a class="smooth-scroll" href="2.2.1-Search-notes.html">Search Notes</a></li>
+                                    <li><a class="smooth-scroll" href="dashboard.html">Sell Your Notes</a></li>
+                                    <li><a class="smooth-scroll" href="buyer-req.html">Buyer Requests</a></li>
+                                    <li><a class="smooth-scroll" href="Faq.html">FAQ</a></li>
+                                    <li><a class="smooth-scroll" href="ContactUs.html">Contact Us</a></li>
+                                    <li>
+                                        <div class="dropdown">
+                                            <button class=" dropdown-toggle .btn-user" type="button" data-toggle="dropdown">
+                                                <img class="more" src="../image/Dashboard/user-img.png" alt="dots">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="user-profile.html">My Profile</a></li>
+                                                <li><a class="dropdown-item" href="mydownloads.html">My Downloads</a></li>
+                                                <li><a class="dropdown-item" href="mysoldnotes.html">My Sold Notes</a></li>
+                                                <li><a class="dropdown-item" href="rejectednotes.html">My Rejected Notes</a></li>
+                                                <li><a class="dropdown-item" href="ChangePassword.html">Change Password</a></li>
+                                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html"
+                                           title="Start Now" role="button">Logout</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- header ends  -->
+        <!--dashboard -->
+        <section id="dashboard">
+
+            <div class="content-box-md">
+
+                <div class="container">
+
+                    <!-- header Row -->
+                    <div class="row">
+
+                        <!-- Main heading -->
+                        <div class="col-md-12">
+                            <div id="heading">
+                                Dashboard
+                            </div>
+                            <a class="btn btn-general add-note-btn smooth-scroll" href="addnotes.html" title="add note" role="button">Add note</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <!-- left side  -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-4 earning">
+                                    @*<img src="../image/Dashboard/my-earning.png" alt="earning">*@
+                                    <img src="~/Image/SearchYourNotes/my-earning.png" alt="earning" />
+                                    <br>
+                                    <span>My Earning</span>
+                                </div>
+                                <div class="col-md-8 col-sm-8 col-xs-8 Number-of-notes">
+                                    <div class="notes-sold">
+                                        <span><a href="mysoldnotes.html">100</a></span><br>
+                                        <p>Number of notes sold</p>
+                                    </div>
+
+                                    <div class="money-earned">
+                                        <span><a href="mysoldnotes.html">$10,00,000</a></span><br>
+                                        <p>Money Earned</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- right side  -->
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-md-4 col-sm-4 my-download">
+                                <span><a href="mydownloads.html">38</a> </span><br>
+                                <p>My Download</p>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 my-rejected">
+                                <span> <a href="rejectednotes.html">12</a></span><br>
+                                <p>My Rejected <br>Notes</p>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-4 buyer-req">
+                                <span> <a href="buyer-req.html">100</a></span><br>
+                                <p>Buyer Requests</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!--progress notes -->
+        <section id="progress notes">
+
+            <div class="content-box-md">
+
+                <div class="container">
+
+                    <!-- header Row -->
+                    <div class="row">
+
+                        <!-- Main heading -->
+                        <div class="col-md-12">
+                            <div id="heading-1">
+                                In Progress Notes
+                            </div>
+                            <div class="elementcontainer">
+                                <div class="search-container">
+
+                                    <img src="~/Image/SearchYourNotes/search-icon.svg" alt="search-icon" class="search-icon" />
+                                    <input id="custom" type="text" placeholder="Search" class="search-box">
+                                </div>
+
+                                <a class="btn btn-general search-1 smooth-scroll" href="#" title="Search" role="button">Search</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <div class=" table-responsive">
+                            <table class="table" id="tbl_1">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ADDED DATE</th>
+                                        <th scope="col">TITLE</th>
+                                        <th scope="col">CATEGORY</th>
+                                        <th scope="col">STATUS</th>
+                                        <th scope="col">ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>09-10-2020</td>
+                                        <td>Data Science</td>
+                                        <td>Science</td>
+                                        <td>Draft</td>
+                                        <td><a href="addnotes.html"><img src="../image/Dashboard/edit.png" alt="edit"></a> <a href="#"><img class="delete" src="../image/Dashboard/delete.png" alt="delete"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10-10-2020</td>
+                                        <td>Accounts</td>
+                                        <td>Commerce</td>
+                                        <td>In Review</td>
+                                        <td><a href="notes-details.html"><img class="eye-progress-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11-10-2020</td>
+                                        <td>Social Studies</td>
+                                        <td>Social</td>
+                                        <td>Submitted</td>
+                                        <td><a href="notes-details.html"><img class="eye-progress-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12-10-2020</td>
+                                        <td>AI</td>
+                                        <td>IT</td>
+                                        <td>Submitted</td>
+                                        <td><a href="notes-details.html"><img class="eye-progress-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13-10-2020</td>
+                                        <td>Lorem ipsum dolor sit arferendis </td>
+                                        <td>lorem</td>
+                                        <td>Draft</td>
+                                        <td><a href="addnotes.html"><img src="../image/Dashboard/edit.png" alt="edit"></a> <a href="#"><img class="delete" src="../image/Dashboard/delete.png" alt="delete"></a></td>
+                                    </tr>
+
+                                </tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- pagination  -->
+                    @*<div class="pagination">
+                            <a href="#">&lt;</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+
+                            <a href="#">&gt;</a>
+                        </div>*@
+                </div>
+            </div>
+        </section>
+
+        <!-- published notees  -->
+        <section id="published notes">
+
+            <div class="content-box-md">
+
+                <div class="container">
+
+                    <!-- header Row -->
+                    <div class="row">
+
+                        <!-- Main heading -->
+                        <div class="col-md-12">
+                            <div id="heading-1">
+                                Published Notes
+                            </div>
+                            <div class="elementcontainer">
+                                <div class="search-container">
+                                    <img src="~/Image/SearchYourNotes/search-icon.svg" alt="search-icon" class="search-icon" />
+                                    <input id="custom_2" type="text" placeholder="Search" class="search-box">
+                                </div>
+
+                                <a class="btn btn-general search-1 smooth-scroll" href="#" title="Search" role="button">Search</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-box">
+                        <div class="table-responsive">
+                            <table class="table" id="tbl_2">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ADDED DATE</th>
+                                        <th scope="col">TITLE</th>
+                                        <th scope="col">CATEGORY</th>
+                                        <th scope="col">Sell Type</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>09-10-2020</td>
+                                        <td>Data Science</td>
+                                        <td>Science</td>
+                                        <td>Paid</td>
+                                        <td>$575</td>
+                                        <td><a href="notes-details.html"><img class="eye-published-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10-10-2020</td>
+                                        <td>Accounts</td>
+                                        <td>Commerce</td>
+                                        <td>Free</td>
+                                        <td>$0</td>
+                                        <td><a href="notes-details.html"><img class="eye-published-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11-10-2020</td>
+                                        <td>Social Studies</td>
+                                        <td>Social</td>
+                                        <td>Free</td>
+                                        <td>$0</td>
+                                        <td><a href="notes-details.html"><img class="eye-published-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>12-10-2020</td>
+                                        <td>AI</td>
+                                        <td>IT</td>
+                                        <td>Paid</td>
+                                        <td>$3452</td>
+                                        <td><a href="notes-details.html"><img class="eye-published-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13-10-2020</td>
+                                        <td>Lorem ipsum dolor sit arferendis </td>
+                                        <td>lorem</td>
+                                        <td>Free</td>
+                                        <td>$0</td>
+                                        <td><a href="notes-details.html"><img class="eye-published-table" src="../image/Dashboard/eye.png" alt="eye"></a></td>
+                                    </tr>
+
+                                </tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <!-- pagination  -->
+                    <!--<div class="pagination">
+                        <a href="#">&lt;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+
+                        <a href="#">&gt;</a>
+                    </div>-->
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <!-- footer  -->
+        <footer class="text-left">
+            <hr>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>
+
+                            Copyright &copy; Tatvasoft All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-google-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+
+
+
+
+        <!-- jquery  -->
+        <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap JS -->
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+        <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+
+        <script>
+            $(document).ready(function () {
+                dtable = $('#tbl_1').DataTable({
+                    "language": {
+                        "paginate": {
+                            "next": '<span>&raquo;</span>',
+                            "previous": '<span>&laquo;<span>'
+                        }
+                    },
+                    "bLengthChange": false,
+                    "lengthMenu": [5],
+                    "bInfo": false,
+                    "dom": "lrtip",
+                    "pagingtype": "simple_numbers",
+                    "order": [[0, "desc"]],
+                    "searching": true,
+                    "ordering": true,
+                });
+
+                $('#custom').keyup(function () {
+                    dtable.search($(this).val()).draw();
+                })
+
+            });
+        </script>
+
+        <script>
+            $(document).ready(function () {
+                dtable_2 = $('#tbl_2').DataTable({
+                    "language": {
+                        "paginate": {
+                            "next": '<span>&raquo;</span>',
+                            "previous": '<span>&laquo;<span>'
+                        }
+                    },
+                    "bLengthChange": false,
+                    "lengthMenu": [5],
+                    "bInfo": false,
+                    "dom": "lrtip",
+                    "pagingtype": "simple_numbers",
+                    "order": [[0, "desc"]],
+                    "searching": true,
+                    "ordering": true,
+                });
+
+                $('#custom_2').keyup(function () {
+                    dtable_2.search($(this).val()).draw();
+                })
+
+            });
+        </script>
+        <script>
+
+            /* =========================================
+                        Mobile Menu
+            ============================================ */
+            $(function () {
+
+                // Show mobile nav
+                $("#mobile-nav-open-btn").click(function () {
+                    $("#mobile-nav").css("height", "100%");
+                });
+
+                // Hide mobile nav
+                $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+                    $("#mobile-nav").css("height", "0%");
+                });
+
+            });
+
+        </script>
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="316f2ade266e42c988d4e306b66294c1" Name="Diagram1">
+        <EntityTypeShape EntityType="NotesMarketdbModel.Country" Width="1.5" PointX="0.75" PointY="15.375" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.Download" Width="1.5" PointX="8.25" PointY="9.875" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.ManageSystemCofi" Width="1.5" PointX="3.75" PointY="2.625" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.NoteCategory" Width="1.5" PointX="0.75" PointY="22.375" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.NotesType" Width="1.5" PointX="0.75" PointY="18.875" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.ReferenceData" Width="1.5" PointX="0.75" PointY="10.75" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.SellerNote" Width="1.5" PointX="3" PointY="8.5" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.SellerNotesAttachement" Width="1.5" PointX="5.25" PointY="16.75" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.SellerNotesReportedIssue" Width="1.5" PointX="13.5" PointY="10.75" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.SellerNotesReview" Width="1.5" PointX="10.5" PointY="10.5" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.UserProfile" Width="1.5" PointX="6" PointY="9.75" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.UserRole" Width="1.5" PointX="1.5" PointY="0.75" />
+        <EntityTypeShape EntityType="NotesMarketdbModel.User" Width="1.5" PointX="0.75" PointY="4.625" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_CountriesSellerNotes" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_DownloadsSellerNotesReportedIssues" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_DownloadsSellerNotesReviews" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_SellerNotesDownloads" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UserDownloads" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UsersDownloads" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_NoteCategoriesSellerNotes" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_NotesTypesSellerNotes" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_ReferenceDataSellerNotes" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_ReferenceDataUserProfile" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_SellerNotesSellerNotesAttachements" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_SellerNotesSellerNotesReportedIssues" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_SellerNotesSellerNotesReviews" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UserSellerNotes" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UsersSellerNotes" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UsersSellerNotesReportedIssues" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UsersSellerNotesReviews" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UsersUserProfile" />
+        <AssociationConnector Association="NotesMarketdbModel.FK_UserRolesUsers" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

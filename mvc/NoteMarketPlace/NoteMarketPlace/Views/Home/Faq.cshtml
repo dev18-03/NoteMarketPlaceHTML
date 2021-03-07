@@ -1,0 +1,330 @@
+﻿
+@{
+    Layout = null;
+    ViewBag.Title = "Faq";
+}
+
+<h2>Faq</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- important meta tags  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title  -->
+    <title>FAQ</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+    <!-- Fontawesome -->
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="css/plugins/font-awesome/css/font-awesome.min.css">*@
+
+    <!-- Bootstrap CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="css/plugins/bootstrap/bootstrap.min.css">*@
+
+
+    <!-- custom css -->
+    @*<link rel="stylesheet" href="../css/2.4-FAQ/faq.css">*@
+    <link href="~/Style/Faq/faq.css" rel="stylesheet" />
+
+    <!-- responsive css -->
+    <link href="~/Style/Faq/responsive.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="../css/2.4-FAQ/responsive.css">*@
+
+</head>
+<body>
+
+    <!-- header  -->
+    <header>
+        <nav class="navbar navbar-fixed-top white-nav-top">
+            <div class="container-fluid">
+                <div class="site-nav-wrapper">
+                    <div class="navbar-header">
+                        <!-- Mobile Menu Open Button -->
+                        <span id="mobile-nav-open-btn">&#9776;</span>
+                        <!-- logo  -->
+                        <a href="/Home/Index" class="navbar-brand smooth-scroll">
+                            <img src="~/Image/Faq/logo blue.png" alt="logo" />
+                            @*<img src="../image/home/logo blue.png" alt="logo">*@
+                        </a>
+                    </div>
+                    <!-- main menu  -->
+                    <div class="container">
+                        <div class="collapse navbar-collapse d">
+                            <ul class="nav navbar-nav pull-right">
+                                <li><a class="smooth-scroll" href="2.2.1-Search-notes.html">Search Notes</a></li>
+                                <li><a class="smooth-scroll" href="#">Sell Your Notes</a></li>
+                                <li><a class="smooth-scroll" href="/home/Faq">FAQ</a></li>
+                                <li><a class="smooth-scroll" href="/home/ContactUs">Contact Us</a></li>
+                                <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="/User/login" role="button">Login</a> </li>
+                                @*<li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html" role="button">Login</a></li>*@
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div id="mobile-nav">
+                        <!-- Mobile Menu Close Button -->
+                        <span id="mobile-nav-close-btn">&times;</span>
+
+                        <div id="mobile-nav-content">
+                            <ul class="nav">
+                                <li><a class="smooth-scroll" href="2.2.1-Search-notes.html">Search Notes</a></li>
+                                <li><a class="smooth-scroll" href="dashboard.html">Sell Your Notes</a></li>
+                                <li><a class="smooth-scroll" href="/home/Faq">FAQ</a></li>
+                                <li><a class="smooth-scroll" href="/home/ContactUs">Contact Us</a></li>
+                                @*<li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="login.html" role="button">Login</a></li>*@
+                                <li><a class="btn btn-general btn-nav btn-nav-2 smooth-scroll" href="/User/login" role="button">Login</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header ends  -->
+    <!-- home -->
+    <section id="home">
+        <div class="home-bg-img"></div>
+
+        <!-- home content -->
+        <div id="home-content">
+            <div>
+
+                <div id="home-heading" class="text-center">
+                    <h1 id="home-heading-1">Frequently Asked Questions</h1>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- home end -->
+    <!-- faq main  -->
+    <section id="faq-main">
+
+        <!-- general que  -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="serach-title">
+                        General Questions
+                    </div>
+                </div>
+            </div>
+            <div class="box" class="col-md-12">
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            What is Notes Marketplace?
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        Notes Marketplace is an online marketplace for university students to buy and sell their course notes
+                    </p>
+                </div>
+
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            Where did Notes Marketplace start?
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        What started out as four friends chucking around an idea in Ahmedabad ended up turning into an
+                        earliest version of Notes Marketplace. So, with 2021 batch of tatvasoft – we has developed this product.
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- uploaders  -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="serach-title">
+                        Uploaders
+                    </div>
+                </div>
+            </div>
+            <div class="box" class="col-md-12">
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            Why should I upload now?
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        To maximize sales. We can't sell your notes if they are rotting on your hard drive. Your notes are
+                        available for purchase the instant they are approved, which means that you could be missing potential
+                        sales as we speak. Despite exam and holiday breaks, our users purchase notes all year round, so the best
+                        time to upload notes is always today
+                    </p>
+                </div>
+
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            What can't I sell?
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        We won't approve materials that have been created by your university or another third party. We also
+                        do not accept assignments, essays, practical’s or take-home exams. We love notes though.
+
+                    </p>
+                </div>
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            How long does it take to upload?
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        Uploading notes is quick and easy. It can take as little as 90 seconds per set of notes. Put it this way, in
+                        the time it took to read these FAQs, you could’ve uploaded several sets of notes.
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- downloaders  -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="serach-title">
+                        Downloaders
+                    </div>
+                </div>
+            </div>
+            <div class="box" class="col-md-12">
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            How do I buy notes?
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        Search for the notes you are after using the 'SEARCH NOTES' tab at the at the top right of every page.
+                        You can then filter results by university, category, course information etc. To purchase, go to detail page
+                        of note and click on download button. If notes are free to download – it will download over the browser
+                        and if notes are paid, Once Seller will allow download you can have notes at my downloads grid for
+                        actual download.
+                    </p>
+                </div>
+
+                <div class="accordion-item">
+                    <button>
+                        <span class="title">
+                            Why should I buy notes?
+
+                        </span>
+                        <i class="fa fa-plus"></i>
+                        <i class="fa fa-minus"></i>
+                    </button>
+                    <p class="description">
+                        The notes on our site are incredibly useful as an educational tool when used correctly. They effectively
+                        demonstrate the techniques that top students employ in order to receive top marks. They also
+                        summaries the course in a concise format and show what that student believed were the most
+                        important elements of the course. Learn from the best.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- footer  -->
+    <footer class="text-left">
+        <hr>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+
+                        Copyright &copy; Tatvasoft All Rights Reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-google-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+    <script>
+        var buttons = document.querySelectorAll('button');
+
+        buttons.forEach(buttonEl => {
+            buttonEl.addEventListener('click', function () {
+                var isCurrentClosed = !this.classList.contains('opened');
+
+                /* Close all accordions */
+                buttons.forEach(el => el.classList.remove('opened'));
+
+                /* If current element is closed, then open it adding 'opened' class */
+                if (isCurrentClosed) {
+                    this.classList.add('opened');
+                }
+            })
+        });
+    </script>
+
+
+
+    <!-- jquery  -->
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+
+        /* =========================================
+                    Mobile Menu
+        ============================================ */
+        $(function () {
+
+            // Show mobile nav
+            $("#mobile-nav-open-btn").click(function () {
+                $("#mobile-nav").css("height", "100%");
+            });
+
+            // Hide mobile nav
+            $("#mobile-nav-close-btn, #mobile-nav a").click(function () {
+                $("#mobile-nav").css("height", "0%");
+            });
+
+        });
+    </script>
+
+</body>
+</html>
+

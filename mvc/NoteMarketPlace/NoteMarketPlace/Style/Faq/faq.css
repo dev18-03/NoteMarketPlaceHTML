@@ -1,0 +1,294 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Open Sans";
+}
+section {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================================
+                Navigation
+============================================ */
+.navbar {
+    padding: 35px 0 20px 0;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+.site-nav-wrapper {
+    padding: 0 85px;
+}
+.navbar-brand {
+    padding: 13px 15px;
+}
+
+ul.navbar-nav>li>a {
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #ffffff;   
+    float: right;
+}
+
+ul.navbar-nav>li>a:hover {
+    background: none;  
+}
+
+ul.navbar-nav>li>a.btn-nav:hover{
+    background: #6255a5;
+}
+
+
+/* White Navigation */
+
+.white-nav-top {
+    background: #fff;
+    padding: 8px 0;
+    -webkit-box-shadow: 0 8px 6px -9px #999;
+    box-shadow: 0 8px 6px -9px #999;
+    z-index: 2;
+    height: 70px;
+
+}
+.white-nav-top ul.navbar-nav>li>a {
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #333333;
+    padding-top: 17px;
+    
+}
+.white-nav-top ul.navbar-nav>li>a>img {
+    width: 45px;
+    height: 31px;
+    position: relative;
+    top: -7px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;  
+}
+
+
+
+
+/* =========================================
+                Home
+============================================ */
+#home {
+    background: none;
+    height: 250px;
+    margin-top: 0px;
+}
+
+.home-bg-img {
+    position: fixed;
+    width: 100%;
+    height: 250px;
+    z-index: -1;
+    /*background: url("../../image/ContactUs/banner-with-overlay.jpg") no-repeat;*/
+    background: url('../../Image/Faq/banner-with-overlay.jpg') no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+
+}
+
+#home-content {
+   margin-top: 100px; 
+}
+
+#home-heading h1{
+    font-family: "Open Sans";
+    font-size: 50px;
+    font-weight: bold(700);
+    line-height: 54px;
+    color: #ffffff;
+    margin: 0;
+    display: inline-block;   
+}
+
+
+
+/* =========================================
+                faq main
+============================================ */
+
+#serach-title{
+    margin-top: 60px;
+    margin-bottom: 30px;
+    display: inline-block;    
+    font-family: "Open Sans";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #6255a5;
+}
+.box{
+    width: 100%;
+    margin: 0 auto;
+}
+.accordion-item {
+    margin-bottom: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #f3f3f3;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    margin: 0;
+    border: 1px solid #d1d1d1;
+}
+
+button i {
+    margin-left: 16px;
+    width: 16px;
+    height: 2px;
+    color: #a6a6a6;
+    margin-bottom: 10px;
+}
+
+button i.fa-minus {
+    display: none;
+}
+
+.title {
+    margin-left: 10px;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: #3333333;
+}
+
+.description {
+    margin-left: 10px;
+    font-family: "Open Sans";
+    color: #333333;
+    font-size: 16px;
+    padding: 0;
+    font-weight: 400;
+    letter-spacing: 0.7px;
+    line-height: 22px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear, max-height 0.3s linear,
+    padding 0.3s linear;
+    
+}
+
+/*  ---  Accordion opened --- */
+
+button.opened ~ .description {
+    opacity: 1;
+    max-height: 150px;
+    padding: 24px 0px;
+}
+
+button.opened i.fa-plus {
+    display: none;
+}
+
+button.opened i.fa-minus {
+    display: block;
+}
+
+/* =========================================
+                footer
+============================================ */
+
+
+footer {
+    background: #ffffff;
+    padding: 30px;
+}
+
+footer p {
+    color: #333333;
+    line-height: 20px;
+    margin: 0;
+}
+
+.social-icons {
+    display: inline-block;
+    text-align: center;
+    float: right;
+    margin-right: 19px;
+}
+.social-icons i {
+    border: none;
+    padding-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 35px;
+    color: white;
+    background: #6255a5;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 400ms linear;
+    -webkit-transition: all 400ms linear;
+    -moz-transition: all 400ms linear;
+    -ms-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+}
+
+
+
+
+/* =========================================
+                Buttons
+============================================ */
+
+.btn-nav {
+    background: #6255a5;
+    color: #ffffff !important;
+    font-family: "Open Sans";
+    border-radius: 3px;
+    font-size: 16px;
+    margin:  11px;
+    padding-top: 4px  !important;
+    width: 89px;
+    height: 30px;
+    line-height: 22px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
