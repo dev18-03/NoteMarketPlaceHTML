@@ -1,0 +1,279 @@
+﻿@model NoteMarketPlace.Models.UserLogin
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+
+
+
+    <style>
+        body {
+            font-family: "Open Sans";
+            padding: 0;
+            margin: 0;
+            background: url('../../Content/imges/banner-with-overlay.jpg') no-repeat fixed;
+            background-size: cover;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+            .center #logo {
+                margin-bottom: 25px;
+                text-align: center;
+            }
+
+            .center #login {
+                background: #ffffff;
+                border: 1px;
+                border-radius: 3px;
+            }
+
+        #margin {
+            margin: 30px;
+            width: 400px;
+        }
+
+        #login h3 {
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 38px;
+            color: #6255a5;
+            margin: 0px 0px 10px 0px;
+            text-align: center;
+        }
+
+        #login p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 19px;
+            color: #333333;
+            margin: 0 0px 20px 0px;
+            text-align: center;
+        }
+
+        input[type="password"],
+        input[type="email"],
+        input[type="text"] {
+            border: none;
+            outline: none;
+            padding-top: 3px;
+            padding-left: 3px;
+            width: 100%;
+        }
+
+        .input-box {
+            width: 100%;
+            height: 30px;
+            border-radius: 3px;
+            border: 1px solid #6255a5;
+            display: inline-block;
+            box-sizing: border-box;
+        }
+
+        button {
+            color: #ffffff;
+            width: 100%;
+            height: 35px;
+            align-content: center;
+            cursor: pointer;
+            border-radius: 3px;
+            background: #6255a5;
+            font-family: "Open Sans";
+            font-size: 18px;
+            line-height: 22px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #forget-password {
+            float: right;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #6255a5;
+            margin-top: 15px;
+        }
+
+        label {
+            padding-top: 15px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            color: #333333;
+        }
+
+        input[type="checkbox"] {
+            float: left;
+            border: 2px solid red;
+        }
+
+        #eye-password {
+            position: absolute;
+            left: 400px;
+            top: 235px;
+            color: grey;
+        }
+        /* media query */
+        @@media (max-width: 480px) {
+            #margin {
+                margin: 30px;
+                width: 250px;
+            }
+
+            #eye-password {
+                position: absolute;
+                left: 250px;
+                top: 230px;
+            }
+
+            #login h3 {
+                font-size: 30px;
+            }
+
+            #login p {
+                font-size: 11px;
+                line-height: 15px;
+            }
+        }
+
+        @@media (max-width: 380px) {
+            #margin {
+                margin: 30px;
+                width: 200px;
+            }
+
+            #eye-password {
+                position: absolute;
+                left: 210px;
+                top: 247px;
+            }
+
+            #forget-password {
+                font-size: 12px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+                height: 30px;
+            }
+
+            .center #logo img {
+                width: 220px;
+            }
+
+            #login p {
+                font-size: 10px;
+                line-height: 15px;
+            }
+        }
+    </style>
+ </head>
+
+
+        <body>
+            <div class="center">
+                <div id="logo">
+
+                    <img src="~/Content/imges/top-logo.png" />
+                </div>
+
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <div id="login" class="input-group">
+                        <div id="margin">
+                            <h3>Login</h3>
+                            <p>Enter your email address and password to login</p>
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <!-- email Field -->
+                            <label for="email"> Email </label>
+                            <div class="input-box">
+                                @*<input type="email" name="email" placeholder="Enter your e-mail" id="email" autocomplete="off" required="*" />*@
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "", placeholder = "Email", @type = "email" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <br />
+
+                            <!--forget Password link -->
+                            <label for="Password">Password </label>
+                            @Html.ActionLink("Forget Password?", "ForgetPassword", "Account", "", new { @class = "link" })
+
+                            <!-- Password Field -->
+                            <div class="input-box">
+                                @*<input id="Password" type="password" name="password" placeholder="Enter your password">*@
+                                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "", placeholder = "Password", type = "Password", id = "inputpassword" } })
+                                <span id="eye-password" toggle="#Password" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+
+                            </div>
+
+                            <br />
+                            <br>
+                            @*checkbox Field*@
+                            <input type="checkbox" name="remember-me" /><span style="margin: 5px">Remember me</span>
+                            @*@Html.CheckBoxFor(m => m.RememberMe)<span style="margin: 5px">Remember me</span>*@
+
+                            <button type="submit" class="submit-btn">Login</button>
+                            <p>
+                                Don't have account?  @Html.ActionLink("SignUp", "Signup", "Account", "", new { @class = "link" })
+                            </p>
+                        </div>
+                    </div>}
+
+            </div>
+
+            <!-- jquery  -->
+            <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="~/Scripts/bootstrap.min.js"></script>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <script>
+
+                // Password Eye
+                $(".toggle-password").click(function () {
+
+                    $(this).toggleClass("fa-eye fa-eye-slash");
+                    var input = $($(this).attr("toggle"));
+                    if (input.attr("type") == "password") {
+                        input.attr("type", "text");
+                    } else {
+                        input.attr("type", "password");
+                    }
+                });
+            </script>
+
+
+
+
+
+
+
+            <script src="~/Scripts/main.js"></script>
+        </body>
+</html>
