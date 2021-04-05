@@ -17,15 +17,7 @@ namespace NoteMarketPlace.Controllers
         {
             if((search == null || search == "") && (Type == null && Country == null && Course==null && Category == null && Uni == null && Rating == null))
             {
-                
-                
-                
-                
-                //var countrylist = db.Countries.ToList();
-                //ViewBag.CountryList = new SelectList(countrylist, "ID", "Name");
 
-                //var typelist = db.NoteTypes.ToList();
-                //ViewBag.TypeList = new SelectList(typelist,"")
 
 
                 var res= db.SellerNotes.ToList();

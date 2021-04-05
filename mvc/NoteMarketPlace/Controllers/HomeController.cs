@@ -13,7 +13,7 @@ namespace NoteMarketPlace.Controllers
 {
     public class HomeController : Controller
     {
-        //private AddNoteBase objAddNoteBase;
+        
         public ActionResult Index()
         {
             return View();
@@ -69,26 +69,26 @@ namespace NoteMarketPlace.Controllers
             ViewBag.SortBy = SortBy;
 
             string userId = User.Identity.Name;
-            var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
-            var sellerID = v.ID;
-            var res = dc.Downloads.Where(a => (a.Seller == sellerID) && (a.IsSellerHasAllowedDownload == false)).ToList();
+            var s = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
+            var sellerID = s.ID;
+            var result = dc.Downloads.Where(a => (a.Seller == sellerID) && (a.IsSellerHasAllowedDownload == false)).ToList();
             if(serachText != null)
             {
-                res = dc.Downloads.Where(x => x.NoteTitle.Contains(serachText) || x.NoteCategory.Contains(serachText) || x.User1.Email.Contains(serachText)).ToList();
-               res= ApplySorting(SortOrder, SortBy, res);
+                result = dc.Downloads.Where(x => x.NoteTitle.Contains(serachText) || x.NoteCategory.Contains(serachText) || x.User1.Email.Contains(serachText)).ToList();
+                result = ApplySorting(SortOrder, SortBy, result);
 
-                res = ApplyPagination(res, PageNumber);
+                result = ApplyPagination(result, PageNumber);
 
             }
             else
             {
-                res = ApplySorting(SortOrder, SortBy, res);
+                result = ApplySorting(SortOrder, SortBy, result);
 
-                res = ApplyPagination(res, PageNumber);
+                result = ApplyPagination(result, PageNumber);
 
             }
 
-            return View(res);
+            return View(result);
 
         }
       
@@ -96,10 +96,10 @@ namespace NoteMarketPlace.Controllers
         public ActionResult DashBoard()
         {
             string userId = User.Identity.Name;
-            var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
-            var sellerID = v.ID;
-            var res = dc.SellerNotes.Where(a => a.SellerID == sellerID).ToList();
-            return View(res);
+            var s = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
+            var sellerID = s.ID;
+            var result = dc.SellerNotes.Where(a => a.SellerID == sellerID).ToList();
+            return View(result);
         }
         
         public ActionResult FAQ()
@@ -273,13 +273,6 @@ namespace NoteMarketPlace.Controllers
             }
             
 
-            
-
-
-
-
-
-
             string userId = User.Identity.Name;
             var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
             var sellerID = v.ID;
@@ -295,8 +288,6 @@ namespace NoteMarketPlace.Controllers
                 paid = false;
             }
             
-
-
 
             SellerNote sellernote = new SellerNote() { SellerID = sellerID,
                                                       Status = 7,
@@ -429,11 +420,9 @@ namespace NoteMarketPlace.Controllers
                 var country = Convert.ToInt32(model.Country);
                 var countryID = dc.Countries.Where(a => a.ID == country).FirstOrDefault();
                 var countryName = countryID.Name;
-
                 var code = Convert.ToInt32(model.CountryCode);
                 var codeId = dc.Countries.Where(a => a.ID == code).FirstOrDefault();
                 var countrycode = codeId.CountryCode;
-
                 var ph =  countrycode + " " + model.PhoneNumber; 
 
 
@@ -473,24 +462,21 @@ namespace NoteMarketPlace.Controllers
 
                                                 };
 
-
                 dc.UserProfiles.Add(UP);
 
-
-               
 
                 dc.SaveChanges();
                 ModelState.Clear();
 
-                var countrylist_1 = dc.Countries.ToList();
-                ViewBag.CountryList = new SelectList(countrylist_1, "ID", "Name");
+                var countrylist_N = dc.Countries.ToList();
+                ViewBag.CountryList = new SelectList(countrylist_N, "ID", "Name");
 
-                var phoneCode_1 = dc.Countries.ToList();
-                ViewBag.PhoneCode = new SelectList(phoneCode_1, "ID", "CountryCode");
+                var phoneCode_N = dc.Countries.ToList();
+                ViewBag.PhoneCode = new SelectList(phoneCode_N, "ID", "CountryCode");
 
 
-                var gender_1 = new List<string> { "Male", "Female", "Other" };
-                ViewBag.GenderList = gender_1;
+                var gender_N = new List<string> { "Male", "Female", "Other" };
+                ViewBag.GenderList = gender_N;
 
                 return View();
 
@@ -520,16 +506,16 @@ namespace NoteMarketPlace.Controllers
             string userId = User.Identity.Name;
             var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
             var buyerid = v.ID;
-            var res = dc.Downloads.Where(a => a.Downloader == buyerid).ToList();
-            return View(res);
+            var result = dc.Downloads.Where(a => a.Downloader == buyerid).ToList();
+            return View(result);
         }
 
        
         public FileResult DownloadFile(int id)
         {
-            
-            var f = dc.SellerNotesAttachements.Where(x => x.NoteID == id).FirstOrDefault();
-            string filepath = f.FilePath;
+           
+            var s = dc.SellerNotesAttachements.Where(x => x.NoteID == id).FirstOrDefault();
+            string filepath = s.FilePath;
             return File(filepath,"application/pdf","Test.pdf");
         }
 
@@ -544,11 +530,11 @@ namespace NoteMarketPlace.Controllers
             {
                 ViewBag.Email = null;
             }
-            var res = dc.SellerNotes.Where(x => x.ID == id).FirstOrDefault();
-            ViewBag.url = res.DisplayPicture;
-            ViewBag.preview = res.NotesPreview;
-            ViewBag.price = '$'+ Convert.ToString(res.SellingPrice);
-            ViewBag.id = res.ID;
+            var result = dc.SellerNotes.Where(x => x.ID == id).FirstOrDefault();
+            ViewBag.url = result.DisplayPicture;
+            ViewBag.preview = result.NotesPreview;
+            ViewBag.price = '$'+ Convert.ToString(result.SellingPrice);
+            ViewBag.id = result.ID;
             var reviewcount = dc.SellerNotesReviews.Where(x => x.NoteID == id).Count();
             if(reviewcount == 0)
             {
@@ -573,7 +559,7 @@ namespace NoteMarketPlace.Controllers
                 var Review_Text = dc.SellerNotesReviews.Where(x => x.NoteID == id).ToList();
                 NoteDetails nd = new NoteDetails()
                 {
-                    sellernote = res,
+                    sellernote = result,
                     review = Review_Text
 
                 };
@@ -583,7 +569,7 @@ namespace NoteMarketPlace.Controllers
             {
                 NoteDetails nd = new NoteDetails()
                 {
-                    sellernote = res
+                    sellernote = result
                 };
                 return View(nd);
             }
@@ -594,8 +580,8 @@ namespace NoteMarketPlace.Controllers
 
         public ActionResult AddBuyerRequest(int id,string buyer)
         {
-            var user = dc.Users.Where(x => x.Email == buyer).FirstOrDefault();
-            var Down_Id = user.ID;
+            var User = dc.Users.Where(x => x.Email == buyer).FirstOrDefault();
+            var Download_Id = User.ID;
             var seller = dc.SellerNotes.Where(x => x.ID == id).FirstOrDefault();
             var seller_id = seller.SellerID;
             var file = dc.SellerNotesAttachements.Where(x => x.NoteID == id).FirstOrDefault();
@@ -605,7 +591,7 @@ namespace NoteMarketPlace.Controllers
             {
                 NoteID = id,
                 Seller = seller_id,
-                Downloader = Down_Id,
+                Downloader = Download_Id,
                 IsSellerHasAllowedDownload = false,
                 AttachmentPath = path,
                 IsAttachmentDownloaded =false,
@@ -614,7 +600,7 @@ namespace NoteMarketPlace.Controllers
                 NoteTitle = seller.Title,
                 NoteCategory = seller.NoteCategory.Name,
                 CreatedDate = DateTime.Now,
-                CreatedBy = Down_Id
+                CreatedBy = Download_Id
 
 
             };
@@ -628,11 +614,11 @@ namespace NoteMarketPlace.Controllers
         [Authorize]
         public ActionResult AllowDownload (int id,int downloader)
         {
-            string userId = User.Identity.Name;
-            var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
-            var sellerid = v.ID;
-            var downid = dc.Downloads.Where(a => (a.Seller == sellerid) && (a.NoteID == id) && (a.Downloader == downloader)).FirstOrDefault();
-            downid.IsSellerHasAllowedDownload = true;
+            string UserId = User.Identity.Name;
+            var s = dc.Users.Where(a => a.Email == UserId).FirstOrDefault();
+            var sellerid = s.ID;
+            var downloadid = dc.Downloads.Where(a => (a.Seller == sellerid) && (a.NoteID == id) && (a.Downloader == downloader)).FirstOrDefault();
+            downloadid.IsSellerHasAllowedDownload = true;
             dc.SaveChanges();
             return RedirectToAction("BuyerRequest");
             
@@ -640,7 +626,7 @@ namespace NoteMarketPlace.Controllers
         [Authorize]
         public ActionResult EditNote(int id)
         {
-            var note = dc.SellerNotes.Where(x => x.ID == id).FirstOrDefault();
+            var note = dc.SellerNotes.Where(y => y.ID == id).FirstOrDefault();
             var list = dc.NoteCategories.ToList();
             ViewBag.List = new SelectList(list, "ID", "Name");
 
@@ -788,23 +774,22 @@ namespace NoteMarketPlace.Controllers
         [Authorize]
         public ActionResult SoldNote()
         {
-            string userId = User.Identity.Name;
-            var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
-            var buyerid = v.ID;
-            var res = dc.Downloads.Where(a => a.Downloader == buyerid).ToList();
+            string UserId = User.Identity.Name;
+            var s = dc.Users.Where(a => a.Email == UserId).FirstOrDefault();
+            var buyerid = s.ID;
+            var result = dc.Downloads.Where(a => a.Downloader == buyerid).ToList();
 
-            return View(res);
+            return View(result);
         }
 
         [Authorize]
         public ActionResult RejectedNote()
         {
-            string userId = User.Identity.Name;
-            var v = dc.Users.Where(a => a.Email == userId).FirstOrDefault();
-            var buyerid = v.ID;
-            var res = dc.SellerNotes.Where(a => a.SellerID == buyerid).ToList();
-
-            return View(res);
+            string UserId = User.Identity.Name;
+            var s = dc.Users.Where(a => a.Email == UserId).FirstOrDefault();
+            var buyerid = s.ID;
+            var result = dc.SellerNotes.Where(a => a.SellerID == buyerid).ToList();
+            return View(result);
         }
 
     }

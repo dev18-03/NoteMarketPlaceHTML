@@ -9,12 +9,11 @@
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <link href="~/Content/jquery-dataTable.css" rel="stylesheet" />
-    <link href="~/Content/dashbord.css" rel="stylesheet" />
 
-    <link href="~/Content/header.css" rel="stylesheet">
+    <link href="~/Content/jquery-dataTable.css" rel="stylesheet" />
+    <link href="~/Content/dashboard/dashbord.css" rel="stylesheet" />
     <link href="~/Content/footer_logo.css" rel="stylesheet">
+    <link href="~/Content/header.css" rel="stylesheet">
     <link href="~/Content/img.css" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,34 +36,31 @@
                 font-family: "Open Sans",sans-serif;
                 font-weight: 400 !important;
                 font-size: 14px !important;
-               
-                border-radius:50% !important;
-
+                border-radius: 50% !important;
             }
 
-        a.paginate_button:hover{
-            background:none !important;
+            a.paginate_button:hover {
+                background: none !important;
+            }
 
-        }
-         a.paginate_button.current :hover {
+            a.paginate_button.current :hover {
                 background: #6255a5 !important;
-         }
+            }
 
-        #myTable_paginate,#myTable-1_paginate{
-            
-            text-align:center !important;
+        #myTable_paginate, #myTable-1_paginate {
+            text-align: center !important;
         }
-
-
     </style>
     <title>Dashbord</title>
 
 </head>
 <body>
 
+
+
     <section id="header">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top ">
             <a class="navbar-brand" href="#">
                 <img src="~/Content/imges/logo.png" alt="logo" class="img-fluid" />
             </a>
@@ -80,7 +76,7 @@
                     </li>
                     <li class="nav-item">
 
-                        @Html.ActionLink("Sell Your Notes Note", "SellNote", "Home", new { area = "" }, new { @class = "nav-link list-link " })
+                        @Html.ActionLink("Sell Your Notes ", "DashBoard", "Home", new { area = "" }, new { @class = "nav-link list-link " })
 
                     </li>
                     <li class="nav-item">
@@ -89,7 +85,7 @@
                     </li>
 
                     <li class="nav-item">
-                        @Html.ActionLink("FAQ", "FAQ", "Home", new { area = "" }, new { @class = "nav-link list-link active-link" })
+                        @Html.ActionLink("FAQ", "FAQ", "Home", new { area = "" }, new { @class = "nav-link list-link " })
 
                     </li>
                     <li class="nav-item">
@@ -152,7 +148,8 @@
                     <h4 class="dashboard-title">Dashboard</h4>
                 </div>
                 <div class="col-md-6 text-right">
-                    <button class="btn">ADD NOTES</button>
+                 
+                    @Html.ActionLink("ADD Notes", "SellNote", "Home",  new { @class = "btn btn-primary" })
                 </div>
 
             </div>
@@ -231,7 +228,7 @@
                                     <img src="~/Content/fonts/search-icon.png" alt="serach" aria-hidden="true">
                                 </span>
                             </div>
-                            <input class="form-control my-0 py-1 custom-input" id="myCustomSearchBox" type="text" placeholder="Search" aria-label="Search">
+                            <input class="form-control my-0 py-1 custom-input" id="CustomSearchBox" type="text" placeholder="Search" aria-label="Search">
                             <button class="btn">SEARCH</button>
                         </div>
 
@@ -251,7 +248,7 @@
             <div class="container">
                 <div class="row table-row-scroll">
                     <div class="col-md-12">
-                        <table class="table table-hover" id="myTable">
+                        <table class="table table-hover" id="Table">
 
                             <thead>
                                 <tr>
@@ -281,7 +278,7 @@
                                                                          <a href="@Url.Action("Delete","Note",new {id = item.ID })" onclick="return confirm('Are you sure you want to Delete?')" >
                                                                              <img src="~/Content/fonts/delete.png" alt="delete"/>
                                                                          </a>                                                                                                                                     
-                                               @* @Html.ActionLink("<img src='~/Content/fonts/delete.png' alt='delete' class='img - fluid'/>","Delete","Note",new { id = item.ID},new { onclick = "return confirm('Are you sure you wish to delete this Note?');" })*@</td>
+                                                            </td>
                                                 }
                                                 else
                                                 {
@@ -347,7 +344,7 @@
                 <div class="row table-row-scroll">
                     <div class="col-md-12">
 
-                        <table class="table table-hover" id="myTable-1">
+                        <table class="table table-hover" id="Table-1">
                             <thead>
                                 <tr>
                                     <th scope="col">ADDED DATE</th>
@@ -435,10 +432,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-    @*<script src="~/Scripts/main.js"></script>*@
+    
 
     <script type="text/javascript">
-        dTable = $('#myTable').DataTable({
+        dTable = $('#Table').DataTable({
 
             "language": {
                 "paginate": {
@@ -448,21 +445,21 @@
             },
 
 
-            "bLengthChange": false, // this gives option for changing the number of records shown in the UI table
-            "lengthMenu": [5], // 5 records will be shown in the table
+            "bLengthChange": false, // 
+            "lengthMenu": [5], // 5 records shown
 
-            "dom": "lrtip", //to hide default searchbox but search feature is not disabled hence customised searchbox can be made.
+            "dom": "lrtip", //to hide default searchbox .
             "pagingType": "simple_numbers"
 
         });
 
-        $('#myCustomSearchBox').keyup(function () {
-            dTable.search($(this).val()).draw(); // this  is for customized searchbox with datatable search feature.
+        $('#CustomSearchBox').keyup(function () {
+            dTable.search($(this).val()).draw(); //  customized searchbox with datatable search feature.
         })
         $(".dataTables_info").hide();
 
 
-        dTable_1 = $('#myTable-1').DataTable({
+        dTable_1 = $('#Table-1').DataTable({
 
             "language": {
                 "paginate": {
@@ -472,16 +469,16 @@
             },
 
 
-            "bLengthChange": false, // this gives option for changing the number of records shown in the UI table
-            "lengthMenu": [5], // 5 records will be shown in the table
+            "bLengthChange": false, // 
+            "lengthMenu": [5], // 5 records shown
 
-            "dom": "lrtip", //to hide default searchbox but search feature is not disabled hence customised searchbox can be made.
+            "dom": "lrtip", //to hide default searchbox 
             "pagingType": "simple_numbers"
 
         });
 
-        $('#myCustomSearchBox-1').keyup(function () {
-            dTable_1.search($(this).val()).draw(); // this  is for customized searchbox with datatable search feature.
+        $('#CustomSearchBox-1').keyup(function () {
+            dTable_1.search($(this).val()).draw(); // customized searchbox with datatable search feature.
         })
         $(".dataTables_info").hide();
 

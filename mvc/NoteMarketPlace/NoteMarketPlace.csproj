@@ -214,11 +214,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\buyer_request.css" />
-    <Content Include="Content\contact.css" />
+    <Content Include="Content\buyer req\buyer_request.css" />
     <Content Include="Content\ContactUs\ContactUs.css" />
     <Content Include="Content\ContactUs\responsive.css" />
-    <Content Include="Content\dashbord.css" />
+    <Content Include="Content\dashboard\dashbord.css" />
     <Content Include="Content\faq.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
@@ -250,7 +249,7 @@
     <Content Include="Content\jquery-dataTable.css" />
     <Content Include="Content\login.css" />
     <Content Include="Content\main.css" />
-    <Content Include="Content\myDownload.css" />
+    <Content Include="Content\mydownload\myDownload.css" />
     <Content Include="Content\notes_details.css" />
     <Content Include="Content\popup.css" />
     <Content Include="Content\review.css" />
@@ -319,10 +318,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="NotePdf\TSC Training Plan for Batch 2020-2021210331604.pdf" />
-    <Content Include="NotePdf\TSC Training Plan for Batch 2020-2021211728911.pdf" />
-    <Content Include="NotePdf\TSC Training Plan for Batch 2020-2021213128890.pdf" />
-    <Content Include="NotePdf\TSC Training Plan for Batch 2020-2021214158411.pdf" />
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -330,6 +325,7 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="NotePdf\Sem-8 Revised Class TT.pdf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -13,7 +13,6 @@
     <link href="~/Content/footer_logo.css" rel="stylesheet" />
     <link href="~/Content/header.css" rel="stylesheet" />
     <link href="~/Content/user_profile.css" rel="stylesheet" />
-
     <link href="~/Content/faq.css" rel="stylesheet" />
 
 
@@ -24,7 +23,7 @@
 <body>
     <section id="header">
         <div class="img-container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+            <nav class="navbar navbar-expand-lg navbar-light  fixed-top ">
                 <a class="navbar-brand" href="#"><img src="~/Content/imges/logo.png" alt="logo" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,12 +36,12 @@
                         </li>
                         <li class="nav-item">
 
-                            @Html.ActionLink("Sell Your Notes Note", "SellNote", "Home", new { area = "" }, new { @class = "nav-link list-link " })
+                            @Html.ActionLink("Sell Your Notes ", "DashBoard", "Home", new { area = "" }, new { @class = "nav-link list-link " })
 
                         </li>
 
                         <li class="nav-item">
-                            @Html.ActionLink("FAQ", "FAQ", "Home", new { area = "" }, new { @class = "nav-link list-link active-link" })
+                            @Html.ActionLink("FAQ", "FAQ", "Home", new { area = "" }, new { @class = "nav-link list-link " })
 
                         </li>
                         <li class="nav-item">

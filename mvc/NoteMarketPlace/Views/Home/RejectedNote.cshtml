@@ -54,10 +54,13 @@
     <title>My Rejected Note</title>
 </head>
 
+
+
+
 <body>
     <section id="header">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top ">
+        <nav class="navbar navbar-expand-lg navbar-light  fixed-top ">
             <a class="navbar-brand" href="#"><img src="~/Content/imges/logo.png" alt="logo" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +74,7 @@
                     </li>
                     <li class="nav-item">
 
-                        @Html.ActionLink("Sell Your Notes Note", "SellNote", "Home", new { area = "" }, new { @class = "nav-link list-link " })
+                        @Html.ActionLink("Sell Your Notes Note", "DashBoard", "Home", new { area = "" }, new { @class = "nav-link list-link " })
 
                     </li>
                     <li class="nav-item">
@@ -80,7 +83,7 @@
                     </li>
 
                     <li class="nav-item">
-                        @Html.ActionLink("FAQ", "FAQ", "Home", new { area = "" }, new { @class = "nav-link list-link active-link" })
+                        @Html.ActionLink("FAQ", "FAQ", "Home", new { area = "" }, new { @class = "nav-link list-link " })
 
                     </li>
                     <li class="nav-item">
@@ -203,7 +206,7 @@
                                                     <button class="dropbtn_1"><img src="~/Content/fonts/dots.png" alt="dot"></button>
                                                     <div class="dropdown-content_1">
                                                         @Html.ActionLink("Download", "DownloadFile", "Home", new { id = item.ID},null)
-                                                        @*<a href="#">Download</a>*@
+                                                       
 
 
 

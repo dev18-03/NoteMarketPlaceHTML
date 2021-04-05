@@ -5,8 +5,8 @@
 
 
 .home-img-container {
-   
-    background: url('imges/banner-with-overlay.jpg') no-repeat;
+    background: url('../imges/banner-with-overlay.jpg') no-repeat;
+    /*background: url('imges/banner-with-overlay.jpg') no-repeat;*/
     background-size: cover;
     height: 500px;
     background-position: center;
